@@ -1,0 +1,2 @@
+User-Agent: *
+DisAllow: /404.php
