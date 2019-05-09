@@ -2,14 +2,12 @@
 <html lang="fr">
 
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-
-    <title>SB Admin </title>
+    <title> Groupe estel </title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -42,6 +40,16 @@
                                     <?php endforeach; ?>
                                 </select>
                             </div>
+
+                            <div class="form-group">
+                                <label for="statut">Filiere:</label>
+                                <select name="filiere" id="" class="form-control">
+                                    <?php foreach ($filieres as $filiere): ?>
+                                        <option value="<?= $filiere->id_filiere ?>"><?php echo($filiere->code_filiere); ?><?php echo($filiere->niveau); ?><?php echo($filiere->groupe); ?></option>
+                                    <?php endforeach; ?>
+                                </select>
+                             </div>
+                            
                             <div class="form-group row ">
                                 <div class="col-sm-6 mb-3 mb-sm-0">
                                     <input type="text" name="numseance" class="form-control" placeholder="Numéro Séance">
@@ -86,19 +94,29 @@
                                     <input type="radio" id="Non" name="transport" class="custom-radio" value="non">
                                 </div>
                                 <!-- debut -->
-                                    <script type="text/javascript">
-                                function add()
+                                    <label>activite :</label>
+                                    <div id="activite" class="col-sm-6 mb-3 mb-sm-0">
+                                        <input type="text" name="activite" placeholder="activite"/>
+                                     <input id="addInput" type="button" value="Ajouter un activite"/>
+                                    <input type="submit" value="Valider" />
+                            <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+                            <script type="text/javascript">
+                                $(document).ready(function()
+                                {
+                                    $('#addInput').click(function()
                                     {
-                                    var input = addInput.innerHTML
-                                    addInput.innerHTML = input +'<label>activite : </label><input type="text" name="activite" /><br />\n';
-                                    }
-                                </script>
-                                    <div class="col-sm-6 mb-3 mb-sm-0">
-                                    <input type="text" name="activite"   /><br />
-                                    <div id="addInput"></div>
-                                    <input type="button" value="Ajouter vos activités" onClick="add();" name="activite" />                                </div>
-                            </div>
-                            <!-- fin -->
+                                        var c = $("#activite input:last").clone();
+                            
+                                        var name = $(c).attr('name');
+                                        value = name.split('-');
+                                        name = value[0]+'-'+(parseInt(value[1])+1);
+
+                                        $(c).attr('name', name);
+                                        $("#mots-clefs").append(c);
+                                    });
+                                });
+                            </script>
+                     <!-- fin -->
                             <input type="submit" name="ajouter" class="btn btn-primary btn-user btn-block" value="ajouter">
                             <hr>
 

@@ -3,11 +3,7 @@ include('includes/_header.php');
 include('includes/_menu.php');
 ?>
 
-
-
-
-
-    <!-- Begin Page Content -->
+<!-- Begin Page Content -->
     <div class="container-fluid">
         <!-- Content Row -->
 
@@ -28,7 +24,7 @@ include('includes/_menu.php');
             </div>
             <div class="card-body">
                 <div class="table-responsive">
-                <?php if($seances !=  null): ?>
+                <?php if($seances != NULL ): ?>
                 <div style="display:flex;">
                     <h5>Filiere:</h5> &nbsp;
                     <?php foreach ($filieres as $filiere): ?>

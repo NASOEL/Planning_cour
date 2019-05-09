@@ -38,7 +38,6 @@ if (isset($_POST['validation'])) {
 
         // var_dump($prenom, $nom,$email,$statut,$telephone,$hash);
         // die();
-
-        header('location:inscrption.php');
+        header('location:inscription.php');
     }
 }

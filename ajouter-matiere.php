@@ -8,7 +8,11 @@ $rep =  $db ->prepare('SELECT id_users,prenom,nom from users WHERE statut=2 ');
 $rep->execute();
 $user = $rep->fetchAll(PDO::FETCH_OBJ);
 
-    require('views/ajouter-matiere-view.php');
+$rep =  $db ->prepare('SELECT id_filiere,code_filiere,niveau from filiere ');
+$rep->execute();
+$filiere = $rep->fetchAll(PDO::FETCH_OBJ);
+
+ require('views/ajouter-matiere-view.php');
 
     if (isset($_POST['ajouter'])) {
         if(!empty(['horaire','lib_matiere,users'])) {
@@ -17,9 +21,9 @@ $user = $rep->fetchAll(PDO::FETCH_OBJ);
             $req->execute([
             'horaire'           => $horaire,
             'lib_matiere'       => $lib_matiere,
-            'users'    =>$users
+            'users'             =>$users,
             ]);
-        var_dump($horaire,$lib_matiere,$users);
+        var_dump($horaire,$lib_matiere,$users,$filiere);
             die();
 
             // header('location:ajouter-filiere.php');

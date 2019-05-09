@@ -42,7 +42,7 @@
                                 </div>
                                 <form class="user" action="index.php" method="post">
                                     <div class="form-group">
-                                        <input type="login" name="matricule" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Matricule">
+                                        <input type="login" name="matricule" name="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Matricule ou Email">
                                     </div>
                                     <div class="form-group">
                                         <input type="password" name="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Mot de passe">
