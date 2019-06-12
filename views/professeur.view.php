@@ -117,17 +117,18 @@ include('includes/_menu.php');
                                 <td><?= $user->email ?></td>
                                 <td><?= $user->telephone ?></td>
                                 <td>
-                                    <a href="#" class="btn btn-primary btn-icon-split btn-sm">
+                                    <a href="views/confirmation-view.php?id_users=<?= $user->id_users ?>" class="btn btn-primary btn-icon-split btn-sm">
                                         <span class="icon text-white-50">
                                           <i class="fas fa-user-edit"></i>
                                         </span>
                                     </a>
-                                    <a href="#" class="btn btn-danger btn-icon-split btn-sm">
-                                        <span class="icon text-white-50">
-                                          <i class="fas fa-trash"></i>
+                                    <a href="professeur.php?id_users=<?= $user->id_users ?>" class="btn btn-danger btn-icon-split btn-sm" id="delete">
+                                        <span class="icon text-white-50" >
+                                        <i class="fas fa-trash" ></i>
+                                        <input type="hidden" value="delete" >
                                         </span>
                                     </a>
-                                </td>
+                                  </td>
                             </tr>
                         <?php endforeach; ?>
                         </tbody>

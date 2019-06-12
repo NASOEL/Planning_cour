@@ -63,7 +63,7 @@
                                     <div class="card bg-danger text-white shadow">
                                         <div class="card-body">
                                             <?php echo $error['login'];?>
-                                            <div class="text-white-50 small">Veillez réessayez s'il vous plait ...</div>
+                                            <div class="text-white-50 small">Veuillez réessayez s'il vous plait ...</div>
                                         </div>
                                     </div>
                                 </div>

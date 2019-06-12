@@ -18,7 +18,7 @@
 
     <!-- Custom styles for this template-->
     <link href="assets/css/sb-admin-2.min.css" rel="stylesheet">
-
+   
 </head>
 
 <body class="bg-gradient">
@@ -34,21 +34,25 @@
                         <div class="text-center">
                             <h1 class="h4 text-gray-900 mb-4">Creer un compte!</h1>
                         </div>
-                        <form class="user" action="inscription.php" method="post" >
+                        <form class="user" action="inscription.php" method="post" id="inscription">
                             <div class="form-group row ">
                                 <div class="col-sm-6 mb-3 mb-sm-0">
-                                    <input type="text" name="prenom" class="form-control form-control-user" id="Prenon" placeholder="Prenon">
+                
+                                    <input type="text" name="prenom" class="form-control form-control-user" id="prenom" placeholder="Prenon" >
+                                        <span id="prenom_manquant"></span>
                                 </div>
                                 <div class="col-sm-6">
-                                    <input type="text" name="nom" class="form-control form-control-user" id="Nom" placeholder="Nom">
+                                    <input type="text" name="nom" class="form-control form-control-user" id="nom" placeholder="Nom">
+                                    <span id="nom_manquant"></span>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <input type="email" name="email" class="form-control form-control-user" id="Email" placeholder="Email">
+                                <input type="email" name="email" class="form-control form-control-user" id="email" placeholder="Email">
+                                <span id="email_manquant"></span>
                             </div>
                             <div class="form-group">
                                 <label for="statut">votre statut:</label>
-                                <select name="statut" id="" class="form-control">
+                                <select name="statut" id="statut" class="form-control">
                                     <option>Statut</option>
                                     <option value="1">Admin</option>
                                     <option value="2">Professeur</option>
@@ -59,12 +63,12 @@
                                     <input type="tel" minlength="9" maxlength="9" name="telephone" class="form-control form-control-user" id="telephone" placeholder="telephone">
                                 </div>
                             </div>
-                            <input type="submit" name="validation" class="btn btn-primary btn-user btn-block" value="s'inscrire">
+                            <input type="submit" name="validation" id="validation" class="btn btn-primary btn-user btn-block" value="inscription" >
                             <hr>
-
-                        </form>
+                    </form>
+                    <p style="color:blue;" id="erreur"></p>
                         <hr>
-                        <div class="text-center">
+                         <div class="text-center">
                             <a class="small" href="accueil-admin.php">Retour à l'accueil</a>
                         </div>
                     </div>
@@ -76,6 +80,7 @@
 </div>
 
 <!-- Bootstrap core JavaScript-->
+ <script src="assets/js/vericate_form.js"></script>
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 

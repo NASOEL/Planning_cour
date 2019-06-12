@@ -7,9 +7,10 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion toggled" id="accordionSidebar">
 
         <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
             <div class="sidebar-brand-icon rotate-n-15">
-                <i class="fas fa-laugh-wink"></i>
+                <!-- logo estel -->
+            <img src="assets/img/logo.png" alt=""  width="50" height="30">
             </div>
             <div class="sidebar-brand-text mx-3">GROUPE_ESTEL</div>
         </a>
@@ -20,14 +21,11 @@
         <!-- Nav Item - Dashboard -->
         <li class="nav-item active">
             <?php if ($_SESSION['user_statut'] == 1): ?>
-                <a class="nav-link" href="accueil-admin.php">
-                <i class="fas fa-fw fa-tachometer-alt"></i>
-                <span>Dashboard</span>
-            </a>
+
             <?php elseif ($_SESSION['user_statut'] == 2): ?>
                 <a class="nav-link" href="accueil-prof.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span>
+                    <span>Tableau</span>
                 </a>
             <?php endif; ?>
         </li>
@@ -50,7 +48,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Components:</h6>
                         <a class="collapse-item" href="inscription.php">Ajouter</a>
-                        <a class="collapse-item" href="professeur.php">Lister</a>
+                        <a class="collapse-item" href="professeur.php">Lister tous les professeurs</a>
                         <a class="collapse-item" href="ajouter-matiere.php">Ajouter matiere</a>
                           <a class="collapse-item" href="ajouter-filiere.php">Ajouter filiere</a>
                     </div>
@@ -64,7 +62,7 @@
                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Utilities:</h6>
+                        <h6 class="collapse-header"></h6>
                         <a class="collapse-item" href="#">Liste</a>
                     </div>
                 </div>
@@ -78,7 +76,7 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Components:</h6>
-                        <a class="collapse-item" href="ajouter-seance.php">Ajouter</a>
+                        <a class="collapse-item" href="mat-fil.php">Ajouter</a>
                         <!-- <a class="collapse-item" href="liste-seance-prof.php">Lister tous</a> -->
                         <a class="collapse-item" href="liste-seance.php">Mes séances</a>
                     </div>
@@ -134,27 +132,34 @@
                         <!-- Dropdown - User Information -->
                         <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                             <a class="dropdown-item" href="#">
-                                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                Profile
+                                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400" href="<?php echo($_SESSION['user_prenom'].' '.$_SESSION['user_nom']) ?>
+                                <?php echo($_SESSION['user_prenom'].' '.$_SESSION['user_nom']) ?>"></i>
+                                Profile 
                             </a>
-                            <a class="dropdown-item" href="#">
+                            <!-- <a class="dropdown-item" href="#">
                                 <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
                                 Settings
-                            </a>
-                            <a class="dropdown-item" href="#">
+                            </a> -->
+                            <!-- <a class="dropdown-item" href="#">
                                 <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
                                 Activity Log
-                            </a>
+                            </a> -->
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                                <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                Logout
-                            </a>
-                        </div>
+                            <!-- <a class="dropdown-item" name="deco" href="logout.php" data-toggle="modal" data-target="logout.php">
+                                
+                                    <a href="logout.php">deconnexion</a>
+                                
+                                
+                                ?
+                                se deconnecter
+                            </a> -->
+                            <?php if(isset($_SESSION['id_users']))?>
+                                
+                            <?php echo '<a href="includes/logout.php">deconecter</a>'
+                           ?>
+                         </div>
                     </li>
-
                 </ul>
-
             </nav>
             <!-- End of Topbar -->
 

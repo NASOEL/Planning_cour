@@ -1,7 +1,3 @@
-<?php
-include('includes/_header.php');
-include('includes/_menu.php');
-?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -35,31 +31,32 @@ include('includes/_menu.php');
                 <div class="col-lg-7">
                     <div class="p-5">
                         <div class="text-center">
-                            <h1 class="h4 text-gray-900 mb-4">Ajouter matiere!</h1>
+                            <h1 class="h4 text-gray-900 mb-4">choisisez matiere et la classe!</h1>
                         </div>
-                        <form class="user" action="ajouter-matiere.php" method="post" >
+                        <!-- pour matiere et filiere -->
+                           <form class="user" action="mat-fil.php" method="post" >
                             <div class="form-group">
-                                <label for="statut"></label>
-                                <select name="users" id="" class="form-control">
-                                    <?php foreach ($user as $users): ?>
-                                        <option value="<?= $users->id_users ?>">
-                                        <?php echo($users->id_users.$users->prenom.$users->nom); ?></option>
+                                <label for="statut">Matiére:</label>
+                                <select name="matiere" id="" class="form-control">
+                                    <?php foreach ($matieres as $matiere): ?>
+                                <option value="<?= $matiere->id_matiere ?>"><?php echo($matiere->lib_matiere); ?></option>
                                     <?php endforeach; ?>
                                 </select>
                             </div>
-                            <div class="form-group row ">
-                                <div class="col-sm-6 mb-3 mb-sm-0">
-                                    <input type="number" name="horaire" class="form-control" placeholder="Volum horaire">
-                                </div>
-                                <div class="col-sm-6">
-                                    <input type="text" name="lib_matiere" class="form-control" placeholder="matiere">
-                                </div>
+                        <hr>
+                            <div class="form-group">
+                                <label for="statut">classe:</label>
+                                <select name="filiere" id="" class="form-control">
+                                    <?php foreach ($filieres as $filiere): ?>
+                                    <option selected>filiere</option>
+                                        <option value="<?= $filiere->id_filiere ?>"><?php echo($filiere->code_filiere); ?></option>
+                                    <?php endforeach; ?>
+                                </select>
                             </div>
-                            <input type="submit" name="ajouter" class="btn btn-primary btn-user btn-block" value="ajouter">
+                        <input type="submit" name="ajouter" class="btn btn-primary btn-user btn-block" value="continuer" href="ajouter-seance.php">
                             <hr>
 
                         </form>
-                        <hr>
                         <div class="text-center">
                             <a class="small" href="accueil-admin.php">retour</a>
                         </div>

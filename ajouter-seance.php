@@ -17,8 +17,8 @@ if (isset($_POST['ajouter'])) {
         extract($_POST);
 
 
-        $req = $db -> prepare('insert into seance(num_seance,dure_seance,objectif_pedagogique,video_projection,acces_internet,transport,ressource_pedagogique,activite,id_matiere,id_filiere)
-        VALUES (:num_seance,:dure_seance,:objectif_pedagogique,:video_projection,:acces_internet,:transport,:ressource_pedagogique,:activite,:id_matiere,:id_filiere)');
+        $req = $db -> prepare('INSERT into seance(num_seance,dure_seance,objectif_pedagogique,video_projection,acces_internet,transport,ressource_pedagogique,activite,id_matiere)
+        VALUES (:num_seance,:dure_seance,:objectif_pedagogique,:video_projection,:acces_internet,:transport,:ressource_pedagogique,:activite,:id_matiere)');
         $req->execute([
             'num_seance'            => $numseance,
             'dure_seance'            => $duree,
@@ -28,11 +28,11 @@ if (isset($_POST['ajouter'])) {
             'transport'             => $transport,
             'ressource_pedagogique' => $ressource,
             'activite'              => $activite,
-            'id_matiere'            => $matiere,
-            'id_filiere'            => $filiere
+            'id_matiere'            =>$matiere,
+                        
         ]);
-        var_dump($numseance, $duree, $objectif, $video,$internet, $transport,$ressource,$activite,$matiere,$filiere);
-        die();
+        // var_dump($numseance, $duree, $objectif, $video,$internet, $transport,$ressource,$activite,$matiere,$filiere);
+        // die();
 
         // header('location: liste-seance.php');
     }

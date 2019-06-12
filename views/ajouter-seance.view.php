@@ -36,6 +36,7 @@
                                 <label for="statut">votre Matiére:</label>
                                 <select name="matiere" id="" class="form-control">
                                     <?php foreach ($matieres as $matiere): ?>
+                                    <option selected>Choisir ici la matiere</option>
                                         <option value="<?= $matiere->id_matiere ?>"><?php echo($matiere->lib_matiere); ?></option>
                                     <?php endforeach; ?>
                                 </select>
@@ -93,29 +94,43 @@
                                     <label for="Non" class="col-form-label">Non</label>
                                     <input type="radio" id="Non" name="transport" class="custom-radio" value="non">
                                 </div>
-                                <!-- debut -->
-                                    <label>activite :</label>
-                                    <div id="activite" class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="text" name="activite" placeholder="activite"/>
-                                     <input id="addInput" type="button" value="Ajouter un activite"/>
-                                    <input type="submit" value="Valider" />
-                            <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
-                            <script type="text/javascript">
-                                $(document).ready(function()
-                                {
-                                    $('#addInput').click(function()
-                                    {
-                                        var c = $("#activite input:last").clone();
-                            
-                                        var name = $(c).attr('name');
-                                        value = name.split('-');
-                                        name = value[0]+'-'+(parseInt(value[1])+1);
-
-                                        $(c).attr('name', name);
-                                        $("#mots-clefs").append(c);
-                                    });
-                                });
-                            </script>
+                                <!-- debut  ajout activité avec une petite formulaire-->
+                            <form class="activite" action="ajouter-seance.php" method="post" >
+                                <div class="form-group row ">
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                      <script type="text/javascript">
+                                            function create_champ(i) {
+                                            var i2 = i + 1;
+                                            document.getElementById('leschamps_'+i).innerHTML = '<input type="text" name="activite['+i+']"></span>';
+                                            document.getElementById('leschamps_'+i).innerHTML += (i <= 10) ? '<br /><span id="leschamps_'+i2+'"><a href="javascript:create_champ('+i2+')">Ajouter activite</a></span>' : '';
+                                            }
+                                        </script>
+                                                    <label>activite :</label>
+                                        <input type="text" name="activite" /><br />
+                                        <span id="leschamps_1"><a href="javascript:create_champ(1)">Ajouter un activité</a></span>
+                                        <!-- <input name="valide" type="submit" value="envoyer"/> -->
+                                        <button type="submit" value="envoyer" name="envoyer"></button>
+                                    </div>
+                                </div>
+                                 <?php
+                                         
+                                  if(isset($_POST['envoyer'])){
+                                    $activite = " ";
+                                    echo "Vos activité : <br>";
+                                    foreach($_POST['envoyer'] as $key){
+                                        if(!isset($activite)){
+                                        $activite = $key;
+                                        }
+                                        else{
+                                        $activite .= " ".$key;
+                                        }
+                                    }
+                                    echo $activite;
+                                    $insertactivite = $bdd->prepare('INSERT INTO seance SET activite = ?');
+                                    $insertactivite->execute(array($activite));
+                                    }  
+                                ?>
+                                </form>
                      <!-- fin -->
                             <input type="submit" name="ajouter" class="btn btn-primary btn-user btn-block" value="ajouter">
                             <hr>

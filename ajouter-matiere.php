@@ -2,8 +2,6 @@
 session_start();
 include('config/database.php');
 
-
-
 $rep =  $db ->prepare('SELECT id_users,prenom,nom from users WHERE statut=2 ');
 $rep->execute();
 $user = $rep->fetchAll(PDO::FETCH_OBJ);
@@ -29,3 +27,4 @@ $filiere = $rep->fetchAll(PDO::FETCH_OBJ);
             // header('location:ajouter-filiere.php');
         }
     }
+    
