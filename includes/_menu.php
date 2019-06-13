@@ -145,18 +145,10 @@
                                 Activity Log
                             </a> -->
                             <div class="dropdown-divider"></div>
-                            <!-- <a class="dropdown-item" name="deco" href="logout.php" data-toggle="modal" data-target="logout.php">
+                             <a class="dropdown-item" name="deco" href="includes/logout.php" data-toggle="modal" data-target="includes/logout.php">
                                 
-                                    <a href="logout.php">deconnexion</a>
-                                
-                                
-                                ?
-                                se deconnecter
-                            </a> -->
-                            <?php if(isset($_SESSION['id_users']))?>
-                                
-                            <?php echo '<a href="includes/logout.php">deconecter</a>'
-                           ?>
+                                    <a href="includes/logout.php">deconnexion</a>
+                             </a> 
                          </div>
                     </li>
                 </ul>
