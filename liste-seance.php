@@ -53,7 +53,6 @@ if (isset($submit)) {
         $rep->execute(['id_filiere' => $filmat->id_filiere]);
         $filieres = $rep->fetchAll(PDO::FETCH_OBJ);
     }
-
     $rep =  $db ->prepare('SELECT * from seance WHERE id_matiere = :id_matiere');
     $rep->execute(['id_matiere' => $matiere]);
     $seances = $rep->fetchAll(PDO::FETCH_OBJ);

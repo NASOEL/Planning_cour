@@ -18,6 +18,8 @@
 
     <!-- Custom styles for this template-->
     <link href="assets/css/sb-admin-2.min.css" rel="stylesheet">
+        <link href="assets/css/style.css" rel="stylesheet">
+
    
 </head>
 
@@ -29,54 +31,59 @@
         <div class="card-body p-0">
             <!-- Nested Row within Card Body -->
             <div class="row">
-                <div class="col-lg-7">
-                    <div class="p-5">
-                        <div class="text-center">
-                            <h1 class="h4 text-gray-900 mb-4">Creer un compte!</h1>
-                        </div>
-                        <form class="user" action="inscription.php" method="post" id="inscription">
-                            <div class="form-group row ">
-                                <div class="col-sm-6 mb-3 mb-sm-0">
-                
-                                    <input type="text" name="prenom" class="form-control form-control-user" id="prenom" placeholder="Prenon" >
-                                        <span id="prenom_manquant"></span>
-                                </div>
-                                <div class="col-sm-6">
-                                    <input type="text" name="nom" class="form-control form-control-user" id="nom" placeholder="Nom">
-                                    <span id="nom_manquant"></span>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <input type="email" name="email" class="form-control form-control-user" id="email" placeholder="Email">
-                                <span id="email_manquant"></span>
-                            </div>
-                            <div class="form-group">
-                                <label for="statut">votre statut:</label>
-                                <select name="statut" id="statut" class="form-control">
-                                    <option>Statut</option>
-                                    <option value="1">Admin</option>
-                                    <option value="2">Professeur</option>
-                                </select>
-                            </div>
-                            <div class="form-group row ">
-                                <div class="col-sm-6 mb-3 mb-sm-0">
-                                    <input type="tel" minlength="9" maxlength="9" name="telephone" class="form-control form-control-user" id="telephone" placeholder="telephone">
-                                </div>
-                            </div>
-                            <input type="submit" name="validation" id="validation" class="btn btn-primary btn-user btn-block" value="inscription" >
-                            <hr>
-                    </form>
-                    <p style="color:blue;" id="erreur"></p>
-                        <hr>
-                         <div class="text-center">
-                            <a class="small" href="accueil-admin.php">Retour à l'accueil</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-         </div>    
-    </div>
+                <div class="col-lg-3">
 
+                </div>
+                <div class="col-lg-6">
+                   <div class="p-5">
+                            <div class="text-center">
+                                <h1 class="h4 text-gray-900 mb-4 inscrire">Creer un compte!</h1>
+                            </div>
+                                <form class="user" action="inscription.php" method="post" id="inscription">
+                                    <div class="form-group row ">
+                                        <div class="col-sm-6 mb-3 mb-sm-0">
+                                            <input type="text" name="prenom" class="form-control form-control-user" id="prenom" placeholder="Prenon" >
+                                            <span id="prenom_manquant"></span>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <input type="text" name="nom" class="form-control form-control-user" id="nom" placeholder="Nom">
+                                            <span id="nom_manquant"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                            <input type="email" name="email" class="form-control form-control-user" id="email" placeholder="Email">
+                                            <span id="email_manquant"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="statut">votre statut:</label>
+                                        <select name="statut" id="statut" class="form-control">
+                                            <option>Statut</option>
+                                            <option value="1">Admin</option>
+                                            <option value="2">Professeur</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group row ">
+                                        <div class="col-sm-6 mb-3 mb-sm-0">
+                                            <input type="tel" minlength="9" maxlength="9" name="telephone" class="form-control form-control-user" id="telephone" placeholder="telephone">
+                                        </div>
+                                    </div>
+                                    <input type="submit" name="validation" id="validation" class="btn btn-primary btn-user btn-block" value="inscription" >
+                                    <hr>
+                                </form>
+                                    <p style="color:blue;" id="erreur"></p>
+                                    <hr>
+                                <div class="text-center icon">
+                                   <a class="small" href="professeur.php">
+                                     <i class="fas fa-caret-square-left icon">
+                                     </i> 
+                                    </a>
+                     </div>
+                 </div>
+              </div> 
+               <div class="col-lg-3">
+            </div>
+          </div>    
+    </div>
 </div>
 
 <!-- Bootstrap core JavaScript-->

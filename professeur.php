@@ -15,3 +15,4 @@ $Delete->bindParam('id_users', $_GET['id_users']);
 $Delete->execute();
 // code modification
 require('views/professeur.view.php');
+

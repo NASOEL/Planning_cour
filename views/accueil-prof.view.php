@@ -10,7 +10,7 @@ include('includes/_menu.php');
         <div class="card shadow mb-4">
             <!-- Card Header - Accordion -->
             <a href="#collapseCardExample" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample">
-                <center> <h6 class="m-0 font-weight-bold text-primary">Espace professeur</h6></center>
+                <center> <h6 class="m-0 font-weight-bold text-primary" style="font-family:roboto;position:relative;font-size:25px">Espace professeur</h6></center>
             </a>
             <!-- Card Content - Collapse -->
             <div class="collapse show" id="collapseCardExample">
@@ -18,7 +18,8 @@ include('includes/_menu.php');
             </div>
         </div>
     </div>
-    <!-- /.container-fluid -->
+     <!-- Pending Requests Card Example -->
+           
 
 
 

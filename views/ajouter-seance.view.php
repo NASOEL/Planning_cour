@@ -33,23 +33,23 @@
                         </div>
                         <form class="user" action="ajouter-seance.php" method="post" >
                             <div class="form-group">
-                                <label for="statut">votre Matiére:</label>
+                                <label for="statut">Matiére:</label>
                                 <select name="matiere" id="" class="form-control">
+                                        <option selected>Choisir ici la matiere</option>
                                     <?php foreach ($matieres as $matiere): ?>
-                                    <option selected>Choisir ici la matiere</option>
                                         <option value="<?= $matiere->id_matiere ?>"><?php echo($matiere->lib_matiere); ?></option>
                                     <?php endforeach; ?>
                                 </select>
                             </div>
 
-                            <div class="form-group">
+                            <!-- <div class="form-group">
                                 <label for="statut">Filiere:</label>
                                 <select name="filiere" id="" class="form-control">
                                     <?php foreach ($filieres as $filiere): ?>
                                         <option value="<?= $filiere->id_filiere ?>"><?php echo($filiere->code_filiere); ?><?php echo($filiere->niveau); ?><?php echo($filiere->groupe); ?></option>
                                     <?php endforeach; ?>
                                 </select>
-                             </div>
+                             </div> -->
                             
                             <div class="form-group row ">
                                 <div class="col-sm-6 mb-3 mb-sm-0">

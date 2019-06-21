@@ -37,28 +37,30 @@
                            <form class="user" action="mat-fil.php" method="post" >
                             <div class="form-group">
                                 <label for="statut">Matiére:</label>
-                                <select name="matiere" id="" class="form-control">
+                                <select name="matiere" id="matiere" class="form-control">
                                     <?php foreach ($matieres as $matiere): ?>
-                                <option value="<?= $matiere->id_matiere ?>"><?php echo($matiere->lib_matiere); ?></option>
+                                <option value="<?= $matiere->id_matiere ?>">
+                                <?php echo $matiere->id_matiere; ?></option>
                                     <?php endforeach; ?>
                                 </select>
                             </div>
                         <hr>
                             <div class="form-group">
                                 <label for="statut">classe:</label>
-                                <select name="filiere" id="" class="form-control">
+                                <select name="filiere" id="filiere" class="form-control">
                                     <?php foreach ($filieres as $filiere): ?>
-                                    <option selected>filiere</option>
-                                        <option value="<?= $filiere->id_filiere ?>"><?php echo($filiere->code_filiere); ?></option>
+                                    <option>filiere</option>
+                                        <option value="<?= $filiere->id_filiere ?>">
+                                        <?php echo $filiere->id_filiere; ?></option>
                                     <?php endforeach; ?>
                                 </select>
                             </div>
-                        <input type="submit" name="ajouter" class="btn btn-primary btn-user btn-block" value="continuer" href="ajouter-seance.php">
+                        <input type="submit" name="ajouter" class="btn btn-primary btn-user btn-block" value="valider">
                             <hr>
 
                         </form>
                         <div class="text-center">
-                            <a class="small" href="accueil-admin.php">retour</a>
+                            <a class="small" href="ajouter-seance.php">Continuer</a>
                         </div>
                     </div>
                 </div>

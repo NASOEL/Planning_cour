@@ -24,7 +24,7 @@ if (isset($_POST['connecter'])) {
             $_SESSION['user_statut']=$user->statut;
 
             if ($user->statut == 1) {
-                header('location: accueil-admin.php');
+                header('location: professeur.php');
             } elseif ($user->statut == 2) {
                 header('location: accueil-prof.php');
             }

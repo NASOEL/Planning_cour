@@ -5,10 +5,10 @@ include('config/database.php');
 $rep =  $db ->prepare('SELECT id_matiere, lib_matiere FROM matiere');
 $rep->execute();
 $matieres = $rep->fetchAll(PDO::FETCH_OBJ);
-// pour filiere
-$req =  $db ->prepare('SELECT id_filiere, code_filiere,niveau,groupe FROM filiere');
-$req->execute();
-$filieres = $req->fetchAll(PDO::FETCH_OBJ);
+// // pour filiere
+// $req =  $db ->prepare('SELECT id_filiere, code_filiere,niveau,groupe FROM filiere');
+// $req->execute();
+// $filieres = $req->fetchAll(PDO::FETCH_OBJ);
 
 require('views/ajouter-seance.view.php');
 

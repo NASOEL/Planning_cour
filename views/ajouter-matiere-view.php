@@ -32,14 +32,14 @@ include('includes/_menu.php');
         <div class="card-body p-0">
             <!-- Nested Row within Card Body -->
             <div class="row">
-                <div class="col-lg-7">
+                <div class="col-lg-3"></div>
+                <div class="col-lg-6">
                     <div class="p-5">
                         <div class="text-center">
                             <h1 class="h4 text-gray-900 mb-4">Ajouter matiere!</h1>
                         </div>
                         <form class="user" action="ajouter-matiere.php" method="post" >
                             <div class="form-group">
-                                <label for="statut"></label>
                                 <select name="users" id="" class="form-control">
                                     <?php foreach ($user as $users): ?>
                                         <option value="<?= $users->id_users ?>">
@@ -65,6 +65,7 @@ include('includes/_menu.php');
                         </div>
                     </div>
                 </div>
+                <div class="col-lg-3"></div>
             </div>
         </div>
     </div>

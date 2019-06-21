@@ -33,6 +33,7 @@ include('includes/_menu.php');
         <div class="card-body p-0">
             <!-- Nested Row within Card Body -->
             <div class="row">
+                <div class="col-lg-2"></div>
                 <div class="col-lg-7">
                     <div class="p-5">
                         <div class="text-center">
@@ -44,37 +45,34 @@ include('includes/_menu.php');
                                 <div class="col-sm-6 mb-3 mb-sm-0">
                                     <input type="text" name="code_filiere" class="form-control" placeholder="code_filiere">
                                 </div>
-                               <div class="form-group">
-                                <label for="niveau">niveau:</label>
-                                <select name="niveau" id="" class="form-control">
-                                    <option>groupe-classe</option>
-                                    <option value="1">licence1</option>
-                                    <option value="2">licence2</option>
-                                    <option value="2">licence3</option>
-                                </select>
-                           </div>
-                            <div class="form-group">
-                                <label for="statut">groupe:</label>
-                                <select name="groupe" id="" class="form-control">
-                                    <option>groupe-classe</option>
-                                    <option value="1">debutant</option>
-                                    <option value="2">intermediare</option>
-                                    <option value="2">avancee</option>
-                                </select>
+                                <div class="form-group">
+                                    <select name="niveau" id="" class="form-control">
+                                        <option>Niveau</option>
+                                        <option value="1">licence1</option>
+                                        <option value="2">licence2</option>
+                                        <option value="3">licence3</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <select name="groupe" id="" class="form-control">
+                                        <option>Groupe</option>
+                                        <option value="1">debutant</option>
+                                        <option value="2">intermediare</option>
+                                        <option value="2">avancee</option>
+                                    </select>
+                                </div>
+                                    <input type="submit" name="ajouter" class="btn btn-primary btn-user btn-block" value="ajouter">
+                                    <hr>
                             </div>
-                            <input type="submit" name="ajouter" class="btn btn-primary btn-user btn-block" value="ajouter">
-                            <hr>
-                        </div>
-                        <div class="text-center">
-                            <a class="small" href="ajouter-filiere-view.php" >retour</a>
-                        </div>
-                         </div>
+                            <div class="text-center">
+                                <a class="small" href="accueil-admin.php" >retour</a>
+                            </div>
                         </form>
                         <hr>
-                        
                         </div>
                     </div>
                 </div>
+                <div class="col-lg-3"></div>
             </div>
         </div>
     </div>

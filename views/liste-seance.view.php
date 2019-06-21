@@ -14,8 +14,8 @@ include('includes/_menu.php');
                 <form action="liste-seance.php" method="post">
                     <div class="form-group">
                         <select name="matiere" id="" class="form-control" onchange="">
+                            <option>Matiere</option>
                             <?php foreach ($matieres as $id): ?>
-                                <option></option>
                                 <option value="<?= $id->id_matiere ?>"><?php echo($id->lib_matiere); ?></option>
                             <?php endforeach; ?>
                         </select>
@@ -25,23 +25,23 @@ include('includes/_menu.php');
             </div>
             <div class="card-body">
                 <div class="table-responsive">
-                <?php if($seances != NULL ): ?>
+                <?php if(!empty($filieres) ): ?>
               <div style="display:flex;">
                     <h5>Filiere:</h5> &nbsp;
-                    <?php foreach ($filieres as $seance): ?>
-                        <span><?= $seance->code_filiere ?></span>
+                    <?php foreach ($filieres as $filiere): ?>
+                        <span><?= $filiere->code_filiere ?></span>
                     <?php endforeach; ?>
                 </div>
                 <div style="display:flex;">
                     <h5>Niveau:</h5> &nbsp;
-                    <?php foreach ($filieres as $seance): ?>
-                        <span><?= $seance->niveau ?></span>
+                    <?php foreach ($filieres as $filiere): ?>
+                        <span><?= $filiere->niveau ?></span>
                     <?php endforeach; ?>
                 </div>
                 <div style="display:float:left;ex;">
                     <h5>Groupe:</h5> &nbsp;
-                    <?php foreach ($filieres as $seance): ?>
-                        <span><?= $seance->groupe ?></span>
+                    <?php foreach ($filieres as $filiere): ?>
+                        <span><?= $filiere->groupe ?></span>
                     <?php endforeach; ?>
                 </div>
                 <div>

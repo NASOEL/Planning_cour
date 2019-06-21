@@ -16,9 +16,10 @@
 
         </div>
         <!-- End of Page Wrapper -->
+        <link href="assets/css/style.css" rel="stylesheet">
 
         <!-- Scroll to Top Button-->
-        <a class="scroll-to-top rounded" href="#page-top">
+        <a class="scroll-to-top rounded scrool" href="#page-top">
             <i class="fas fa-angle-up"></i>
         </a>
 

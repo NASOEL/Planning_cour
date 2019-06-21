@@ -552,6 +552,10 @@ pre code {
 .pre-scrollable {
   max-height: 340px;
   overflow-y: scroll;
+  
+}
+.scrool{
+  background-color:#0d4194;
 }
 
 .container {
@@ -8542,7 +8546,7 @@ button.bg-dark:focus {
 
 .mb-4,
 .my-4 {
-  margin-bottom: 1.5rem !important;
+  margin-bottom: 2.5rem !important;
 }
 
 .ml-4,
@@ -10792,8 +10796,8 @@ a:focus {
   color: #5a5c69 !important;
 }
 
-.text-gray-900 {
-  color: #3a3b45 !important;
+.text-gray-900  {
+  color:#0d4194 !important;
 }
 
 .icon-circle {
@@ -12005,4 +12009,7 @@ footer.sticky-footer .copyright {
 
 body.sidebar-toggled footer.sticky-footer {
   width: 100%;
+}
+.estel{
+  width:100%;
 }

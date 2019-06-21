@@ -145,9 +145,10 @@
                                 Activity Log
                             </a> -->
                             <div class="dropdown-divider"></div>
-                             <a class="dropdown-item" name="deco" href="includes/logout.php" data-toggle="modal" data-target="includes/logout.php">
-                                
-                                    <a href="includes/logout.php">deconnexion</a>
+                             <a class="dropdown-item"href="includes/logout.php" data-toggle="modal" data-target="includes/logout.php">
+                                <a href="includes/logout.php">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    se deconnecter</a>
                              </a> 
                          </div>
                     </li>
