@@ -13,9 +13,8 @@ include('includes/_menu.php');
         <!-- Content Row -->
         <div class="row">
             <div class="col-sm-12">
-                <a href="#collapseCardExample" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample">
                <h6 class="m-0 font-weight-bold text-primary" style="font-family:roboto;position:relative;left:35%;font-size:25px">Bienvenue dans l'espace admin</h6>
-            </a>
+            <hr>
         </div>
             <!-- Earnings (Monthly) Card Example -->
             <div class="col-xl-3 col-md-6 mb-4">

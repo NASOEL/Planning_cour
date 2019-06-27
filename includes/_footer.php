@@ -19,7 +19,7 @@
         <link href="assets/css/style.css" rel="stylesheet">
 
         <!-- Scroll to Top Button-->
-        <a class="scroll-to-top rounded scrool" href="#page-top">
+        <a class="scroll-to-top rounded scrool" href="#page-top" style="background-color:#224abe">
             <i class="fas fa-angle-up"></i>
         </a>
 

@@ -17,10 +17,11 @@
 
     <!-- Custom styles for this template-->
     <link href="assets/css/sb-admin-2.min.css" rel="stylesheet">
+        <link href="assets/css/style.css" rel="stylesheet">
 
 </head>
 
-<body class="bg-gradient-primary">
+<body class="">
 
 <div class="container">
 
@@ -28,19 +29,20 @@
         <div class="card-body p-0">
             <!-- Nested Row within Card Body -->
             <div class="row">
-                <div class="col-lg-7">
+                <div class="col-sm-3"></div>
+                <div class="col-lg-6">
                     <div class="p-5">
                         <div class="text-center">
-                            <h1 class="h4 text-gray-900 mb-4">choisisez matiere et la classe!</h1>
+                            <h1 class="h4 text-gray-900 mb-4 inscrire1">choisisez matiere et la classe!</h1>
                         </div>
                         <!-- pour matiere et filiere -->
-                           <form class="user" action="mat-fil.php" method="post" >
+                           <form class="user " action="mat-fil.php" method="post" >
                             <div class="form-group">
                                 <label for="statut">Matiére:</label>
                                 <select name="matiere" id="matiere" class="form-control">
                                     <?php foreach ($matieres as $matiere): ?>
                                 <option value="<?= $matiere->id_matiere ?>">
-                                <?php echo $matiere->id_matiere; ?></option>
+                                <?php echo $matiere->id_matiere.$matiere->lib_matiere; ?></option>
                                     <?php endforeach; ?>
                                 </select>
                             </div>
@@ -51,7 +53,7 @@
                                     <?php foreach ($filieres as $filiere): ?>
                                     <option>filiere</option>
                                         <option value="<?= $filiere->id_filiere ?>">
-                                        <?php echo $filiere->id_filiere; ?></option>
+                                        <?php echo $filiere->id_filiere.$filiere->code_filiere; ?></option>
                                     <?php endforeach; ?>
                                 </select>
                             </div>
@@ -59,6 +61,7 @@
                             <hr>
 
                         </form>
+                        <div class="col-sm-3"></div>
                         <div class="text-center">
                             <a class="small" href="ajouter-seance.php">Continuer</a>
                         </div>
